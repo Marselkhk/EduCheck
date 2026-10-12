@@ -58,7 +58,7 @@ EduCheck/
 ---
 
 ## 🚀 Как запустить
-
+docker compose up -d
 ### Требования
 - Docker Desktop (или Docker + Docker Compose)
 - Свободные порты: `3000` (фронт), `8000` (API), `5432` (БД)
