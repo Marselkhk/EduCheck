@@ -58,7 +58,7 @@ EduCheck/
 ---
 
 ## 🚀 Как запустить
-docker compose up -d
+
 ### Требования
 - Docker Desktop (или Docker + Docker Compose)
 - Свободные порты: `3000` (фронт), `8000` (API), `5432` (БД)
@@ -66,6 +66,50 @@ docker compose up -d
 ### Шаги
 
 1. **Клонировать репозиторий:**
+   ```bash
+   git clone https://github.com/Marselkhk/EduCheck.git
+   cd EduCheck
+   ```
+
+2. **Создать `.env` из шаблона:**
+   ```bash
+   cp .env.example .env
+   ```
+   Открыть `.env` и заполнить значения:
+   ```
+   POSTGRES_USER=educh_admin
+   POSTGRES_PASSWORD=your_secure_password
+   POSTGRES_DB=educh_db
+   ```
+
+3. **Запустить:**
+   ```bash
+   docker compose up -d
+   ```
+
+4. **Открыть в браузере:**
+   - Frontend: http://localhost:3000
+   - API-документация (Swagger): http://localhost:8000/docs
+
+### Остановить
+
+```bash
+docker compose down
+```
+
+### Полностью сбросить БД
+
+```bash
+docker compose down -v
+```
+
+---
+
+## 👨‍💻 Автор
+
+**Marsel** — [@Marselkhk](https://github.com/Marselkhk)
+
+Проект создан как учебный: архитектура, дизайн API и логика — авторские, код сгенерирован с помощью AI-ассистентов и адаптирована под задачи проекта.
    ```bash
    git clone https://github.com/Marselkhk/EduCheck.git
    cd EduCheck
