@@ -1,0 +1,42 @@
+# === секреты ===
+.env
+.env.local
+.env.production
+*.env
+!.env.example
+
+# === uploads (пользовательские файлы) ===
+uploads/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# === Node.js / Next.js ===
+node_modules/
+.next/
+out/
+dist/
+build/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# === логи ===
+*.log
+logs/
+
+# === IDE ===
+.idea/
+.vscode/
+*.iml
+
+# === OS ===
+.DS_Store
+Thumbs.db

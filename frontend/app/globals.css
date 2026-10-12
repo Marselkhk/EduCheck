@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --secondary: #6366f1;
+  --accent: #f59e0b;
+  --danger: #ef4444;
+  --bg-light: #f9fafb;
+  --bg-dark: #0f172a;
+  --text-light: #171717;
+  --text-dark: #f1f5f9;
+  --card-light: rgba(255, 255, 255, 0.7);
+  --card-dark: rgba(30, 41, 59, 0.7);
+}
+
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Тёмная тема */
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark .bg-white\/70,
+.dark .bg-white\/80,
+.dark .bg-white\/60,
+.dark .bg-white\/95 {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #334155 !important;
+}
+
+.dark .text-gray-900 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-gray-500 {
+  color: #64748b !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #1e293b !important;
+}
+
+.dark .border-white\/80 {
+  border-color: rgba(51, 65, 85, 0.8) !important;
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease;
+}
+
+/* Печать */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  .print\:border-0 {
+    border: 0 !important;
+  }
+}
